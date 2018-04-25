@@ -26,14 +26,14 @@ namespace Powerpoint
 
         static void Main(string[] args)
         {
-            string Title;
-            string Text;
-            string ImageURL;
+            string Title = "";
+            string Text = "";
+            string ImageURL = "";
             Console.WriteLine("Enter the name of the slide title, please.");
-            Title=Console.ReadLine().ToString();
+            Title+=Console.ReadLine().ToString();
             Console.WriteLine("Enter slide description, please.");
-            Text = Console.ReadLine().ToString();
-            ImageURL = "https://www.google.com/search?q=" + Text + "&tbm=isch";
+            Text += Console.ReadLine().ToString();
+            ImageURL += "https://www.google.com/search?q=" + Text + "&tbm=isch";
 
             // string[] PictureFile = { @"C:\powerpoint\img.1.jpg", @"C:\powerpoint\img.1.jpg", @"C:\powerpoint\img.1.jpg" };
 
@@ -60,13 +60,14 @@ namespace Powerpoint
                 objText.Font.Name = "Book Angigua";
                 objText.Font.Size = 32;
             // TRY TO INSERT TEXT BOX IN SLIDE 
-            
-            slide.Shapes.AddTextbox(Orientation: MsoTextOrientationHorizontal,
-                Left: 1,
-                Top: 1,
-               Width: 1,
-               Height: 1
-                ).TextFrame.TextRange.Text = ImageURL; 
+
+            slide.Shapes.AddTextbox(MsoTextOrientation.msoTextOrientationHorizontal,
+                Left: 0,
+                Top: 0,
+               Width: 0,
+               Height: 0
+                )
+                .TextFrame.TextRange.Text = Text; 
             
 
                 //Microsoft.Office.Interop.PowerPoint.Shape shape =
