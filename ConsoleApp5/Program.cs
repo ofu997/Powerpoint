@@ -17,7 +17,7 @@ namespace Powerpoint
             string Title = "";
             string Text = "";
             string ImageURL = "";
-            Console.WriteLine("Enter the name of the slide title, please.");
+            Console.WriteLine("Enter the name of the slide title, please. This will allow you to search for related images.");
             Title += Console.ReadLine().ToString();
             Console.WriteLine("Enter description, please.");
             Text += Console.ReadLine().ToString();
